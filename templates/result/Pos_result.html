@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Positive Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightgreen;
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            color: green;
+            margin-top:15%;
+        }
+        .highlight {
+            font-size: 24px;
+            color: #28A745;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+            padding: 10px; /* Add some padding to the highlighted messages */
+            border-radius: 10px; /* Add rounded corners to the highlighted messages */
+        }
+        .emoji {
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positive Results</h1>
+    <p class="highlight">{{output}}</p>
+    
+    <p class="emoji">😊</p>
+</body>
+</html>

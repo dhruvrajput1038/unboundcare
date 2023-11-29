@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- <link rel="stylesheet" href="diab.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='diab.css') }}">
+
+    <style>
+        
+        .Submit {
+        background-color: blue; /* Green background color */
+        border: none; /* Remove border */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Add padding to the button */
+        text-align: center; /* Center the text horizontally */
+        text-decoration: none; /* Remove underlines from the text */
+        display: inline-block; /* Display the button as an inline block element */
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Add margin around the button */
+        cursor: pointer; /* Add a pointer cursor on hover */
+        border-radius: 5px; /* Add rounded corners */
+        }
+
+        /* Define a hover effect */
+        .Submit:hover {
+        background-color: lightseagreen; /* Darker green on hover */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> Heart Disease Prediction System </header>
+        <form action="/heart/predict.html" method="post">
+            <div class="Form first">
+                <div class="Deatils Personal">
+                    <span class="title"> <b>Required Details</b></span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label > Age</label>
+                            <input type="number" placeholder="Age in Years" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Sex </label>
+                            <input type="number" placeholder="Male: 1 and Female: 0" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Chest Pain Type</label>
+                            <input type="number" placeholder="1= typical type 1 | 2= typical type angina | 3= non-angina pain | 4= asymptomatic" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> Resting blood pressure	 </label>
+                            <input type="number" placeholder="Value in mmHg" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Serum Cholesterol </label>
+                            <input type="number" placeholder="Value in mm/dL" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Fasting blood sugar </label>
+                            <input type="number" placeholder="1≥120 mg/dL | 0≤120 mg/dL" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Resting electrographic results </label>
+                            <input type="number" placeholder="0= normal | 1= having ST-T wave abnormal |  2= left ventricular hypertrophy" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Maximum heart rate achieved </label>
+                            <input type="number" placeholder="Continuous value" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> Exercise induced angina </label>
+                            <input type="number" placeholder="0= No |  1= Yes" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> ST depression induced by exercise relative to rest </label>
+                            <input type="text" placeholder="Continuous value" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> Slope of the peak
+                                exercise ST segment </label>
+                            <input type="number" placeholder="1= unsloping |  2= flat |  3=downsloping" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Number of major vessels colored by fluoroscopy </label>
+                            <input type="number" placeholder="0–3 value" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Defect type </label>
+                            <input type="number" placeholder="3= normal |  6= fixed |  7= reversible defect" required>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                
+                    <input type="submit" class="Submit" value="Submit">
+
+                    <div class="output">
+                        Output : {{output}}
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+           

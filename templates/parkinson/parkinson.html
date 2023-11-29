@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- <link rel="stylesheet" href="diab.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='diab.css') }}">
+
+    <style>
+        
+        .Submit {
+        background-color: blue; /* Green background color */
+        border: none; /* Remove border */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Add padding to the button */
+        text-align: center; /* Center the text horizontally */
+        text-decoration: none; /* Remove underlines from the text */
+        display: inline-block; /* Display the button as an inline block element */
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Add margin around the button */
+        cursor: pointer; /* Add a pointer cursor on hover */
+        border-radius: 5px; /* Add rounded corners */
+        }
+
+        /* Define a hover effect */
+        .Submit:hover {
+        background-color: lightseagreen; /* Darker green on hover */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> Parkinson Disease Prediction System </header>
+        <form action="/parkinson/predict.html" method="post">
+            <div class="Form first">
+                <div class="Deatils Personal">
+                    <span class="title"> <b>Required Details</b></span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label > Name</label>
+                            <input type="text" name="name" placeholder="ASCII subject name and recording number" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> MDVP:Fo(Hz) </label>
+                            <input type="number" name="MDVP:Fo(Hz)" placeholder="Average vocal fundamental frequency" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> MDVP:Fhi(Hz)</label>
+                            <input type="number" name="MDVP:Fhi(Hz)" placeholder="Maximum vocal fundamental frequency" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> MDVP:Flo(Hz)	 </label>
+                            <input type="number" name="MDVP:Flo(Hz)" placeholder="Minimum vocal fundamental frequency" required>
+                        </div>
+
+                        <label> <b>Five measures of variation in Frequency</b></label>
+                        
+                        <div class="input-field">
+                            <label> MDVP:Jitter(%)</label>
+                            <input type="number" name="MDVP:Jitter(%)" placeholder="Percentage of cycle-to-cycle variability of the period duration" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> MDVP:Jitter(Abs) </label>
+                            <input type="number" name="MDVP:Jitter(Abs)" placeholder="Absolute value of cycle-to-cycle variability of the period duration" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> MDVP:RAP </label>
+                            <input type="number" name="MDVP:RAP" placeholder="Relative measure of the pitch disturbance" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> MDVP:PPQ </label>
+                            <input type="number"
+                            name="MDVP:PPQ"
+                            placeholder="Pitch perturbation quotient" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> Jitter:DDP </label>
+                            <input type="number" name="Jitter:DDP" placeholder="Average absolute difference of differences between jitter cycles" required>
+                        </div>
+
+                        <b><label> Six measures of variation in amplitude </label></b>
+
+                        <div class="input-field">
+                            <label> MDVP:Shimmer </label>
+                            <input type="text" name="MDVP:Shimmer" placeholder="Variations in the voice amplitdue" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> MDVP:Shimmer(dB) </label>
+                            <input type="number" name="MDVP:Shimmer(dB)" placeholder="Variations in the voice amplitdue in dB" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Shimmer:APQ3  </label>
+                            <input type="number" name="Shimmer:APQ3" placeholder="Three point amplitude perturbation quotient measured against the average of the three amplitude" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Shimmer:APQ5 </label>
+                            <input type="number" name="Shimmer:APQ5" placeholder="Five point amplitude perturbation quotient measured against the average of the three amplitude" required>
+                        </div>
+                        <div class="input-field">
+                            <label> MDVP:APQ </label>
+                            <input type="number" name="MDVP:APQ" placeholder="Amplitude perturbation quotient from MDVP" required>
+                        </div>
+                        <div class="input-field">
+                            <label> Shimmer:DDA  </label>
+                            <input type="number" name="Shimmer:DDA" placeholder="Average absolute difference between the amplitudes of consecutive periods" required>
+                        </div>
+
+                        <b><label> Two measures of ratio of noise to tonal components in the voice </label></b>
+                        <div class="input-field">
+                            <label> NHR  </label>
+                            <input type="number" name="NHR" placeholder="Noise-to-harmonics Ratio" required>
+                        </div>
+                        <div class="input-field">
+                            <label> HNR  </label>
+                            <input type="number" name="HNR" placeholder="Harmonics-to-noise Ratio" required>
+                        </div>
+                        <div class="input-field">
+                            <label> status </label>
+                            <input type="number" name="status" placeholder="Health status of the subject (one) - Parkinson's, (zero) - healthy" required>
+                        </div>
+
+                        <b><label> Two nonlinear dynamical complexity measures </label></b>
+                        <div class="input-field">
+                            <label> RPDE  </label>
+                            <input type="number" name="RPDE" placeholder="Recurrence period density entropy" required>
+                        </div>
+                        <div class="input-field">
+                            <label> D2 </label>
+                            <input type="number" name="D2" placeholder="correlation dimension" required>
+                        </div>
+                        <div class="input-field">
+                            <label> DFA  </label>
+                            <input type="number" name="DFA" placeholder="Signal fractal scaling exponent" required>
+                        </div>
+
+                        <b><label> Three nonlinear measures of fundamental frequency variation </label></b>
+                        <div class="input-field">
+                            <label> spread1 </label>
+                            <input type="number" name="spread1" placeholder="discrete probability distribution of occurrence of relative semitone variations" required>
+                        </div>
+                        <div class="input-field">
+                            <label> spread2 </label>
+                            <input type="number" name="spread2" placeholder="Three nonlinear measures of fundamental frequency variation" required>
+                        </div>
+                        <div class="input-field">
+                            <label> PPE </label>
+                            <input type="number" name="PPE" placeholder="Entropy of the discrete probability distribution of occurrence of relative semitone variations" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <input type="submit" class="Submit" value="Submit">
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+           

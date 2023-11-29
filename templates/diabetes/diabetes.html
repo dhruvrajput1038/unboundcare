@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diab.css') }}">
+
+    <style>
+        
+        .Submit {
+        background-color: blue; /* Green background color */
+        border: none; /* Remove border */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Add padding to the button */
+        text-align: center; /* Center the text horizontally */
+        text-decoration: none; /* Remove underlines from the text */
+        display: inline-block; /* Display the button as an inline block element */
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Add margin around the button */
+        cursor: pointer; /* Add a pointer cursor on hover */
+        border-radius: 5px; /* Add rounded corners */
+        }
+
+        /* Define a hover effect */
+        .Submit:hover {
+        background-color: lightseagreen; /* Darker green on hover */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> Diabetes Prediction System </header>
+        <form action="/diabetes/predict.html" method="post">
+            <div class="Form first">
+                <div class="Deatils Personal">
+                    <span class="title"> <b>Required Details</b></span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label > Pregnancies</label>
+                            <input type="number" id="pregnancies" name="pregnancies" placeholder="Enter Number of Pregnancies" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Glucose Level </label>
+                            <input type="number" id="glucose" name="glucose"  placeholder="Enter Glucose Level" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Blood Pressure</label>
+                            <input type="number" id="blood-pressure" name="blood-pressure" placeholder="Enter Blood Pressure" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label> Skin Thickness </label>
+                            <input type="number" id="skin-thickness" name="skin-thickness" placeholder="Enter Skin Thickness" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Insulin Level </label>
+                            <input type="number" id="insulin" name="insulin" placeholder="Enter Insulin Level" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> BMI </label>
+                            <input type="number" id="bmi" name="bmi" placeholder="Enter BMI" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Diabetes Pedigree Function </label>
+                            <input type="number" id="pedigree" name="pedigree" placeholder="Enter Pedigree Function" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label> Age </label>
+                            <input type="number" id="age" name="age" placeholder="Enter Your Age" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <input type="submit" class="Submit" value="Submit">
+
+                    <!-- <button class="Submit">
+                        <span class="btnText"> Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button> -->
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+           
